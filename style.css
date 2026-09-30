@@ -17,21 +17,21 @@ h1 {
 
 p {
     text-align: center;
-    color: #666;
+    color: #5c0f0f;
     margin-top: 5px;
 }
 button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #36506b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: #0b65c5;
 }
 
 table {
@@ -43,7 +43,7 @@ table {
 }
 
 th {
-    background-color: #007BFF;
+    background-color: #3b75b3;
     color: white;
     padding: 10px;
     text-align: left;
@@ -51,7 +51,7 @@ th {
 
 td {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #aa0a0a;
 }
 
 tr:hover {

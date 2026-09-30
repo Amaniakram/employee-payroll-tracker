@@ -1,5 +1,7 @@
+const employees = [];
+
 function collectEmployees() {
-  const employees = [];
+  
 
   while (true) {
     const firstName = prompt("What is the employee's first name?");
@@ -56,7 +58,7 @@ function getRandomEmployee(employees) {
 }
 
 function trackEmployeeData() {
-  const employees = collectEmployees();
+  collectEmployees();
 
   employees.sort(function(a, b) {
     return a.lastName.localeCompare(b.lastName);
@@ -67,5 +69,24 @@ function trackEmployeeData() {
   getRandomEmployee(employees);
 }
 
+function viewPayroll() {
+  const payrollTableBody = document.getElementById("payrollTableBody");
+
+  payrollTableBody.innerHTML = "";
+
+  employees.forEach(function(employee) {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>${employee.firstName}</td>
+      <td>${employee.lastName}</td>
+      <td>$${employee.salary}</td>
+    `;
+
+    payrollTableBody.appendChild(row);
+  });
+}
 document
 .getElementById("addEmployeeBtn").addEventListener("click", trackEmployeeData);
+document
+.getElementById("viewPayrollBtn").addEventListener("click", viewPayroll);
